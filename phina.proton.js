@@ -111,5 +111,12 @@ phina.define('phina.proton.ProtonEmitter', {
   _syncEmitter: function() {
     this.protonEmitter.p.set(this.x, this.y);
     this.protonEmitter.rotation = this.rotation;
+  },
+
+  _accessor: {
+    rate: {
+      get: function()  { return this.protonEmitter.rate; },
+      set: function(v) { this.protonEmitter.rate = v; }
+    }
   }
 });
